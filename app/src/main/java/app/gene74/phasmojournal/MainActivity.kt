@@ -99,7 +99,7 @@ fun MainScreen(
                     selectedGhost = selectedGhost,
                     onGhostSelected = { ghost -> selectedGhost = ghost }
                 )
-                2 -> ChangesScreen()
+                2 -> ChangesScreen(isDarkTheme = isDarkTheme)
             }
         }
     }
