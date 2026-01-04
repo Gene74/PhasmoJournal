@@ -1,4 +1,4 @@
-package app.tomsgenesis.phasmojournal
+package app.gene74.phasmojournal
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

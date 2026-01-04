@@ -1,4 +1,4 @@
-package app.tomsgenesis.phasmojournal.ui
+package app.gene74.phasmojournal.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,10 +13,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.tomsgenesis.phasmojournal.changeLog
+import app.gene74.phasmojournal.changeLog
 
 @Composable
 fun ChangesScreen() {
@@ -43,11 +42,11 @@ fun ChangesScreen() {
                     Text(
                         text = change.date,
                         style = MaterialTheme.typography.bodyLarge,
+                        fontWeight = FontWeight.Bold,
                         modifier = Modifier.weight(0.3f)
                     )
                     Text(
                         text = change.description,
-                        fontStyle = FontStyle.Italic,
                         style = MaterialTheme.typography.bodyLarge,
                         modifier = Modifier.weight(0.7f)
                     )

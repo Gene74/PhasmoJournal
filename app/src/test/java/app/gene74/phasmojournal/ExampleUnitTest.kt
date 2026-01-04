@@ -1,4 +1,4 @@
-package app.tomsgenesis.phasmojournal
+package app.gene74.phasmojournal
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package app.tomsgenesis.phasmojournal.ui.theme
+package app.gene74.phasmojournal.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package app.tomsgenesis.phasmojournal
+package app.gene74.phasmojournal
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -23,12 +23,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import app.tomsgenesis.phasmojournal.ui.ChangesScreen
-import app.tomsgenesis.phasmojournal.ui.GhostInfoScreen
-import app.tomsgenesis.phasmojournal.ui.JournalScreenContent
-import app.tomsgenesis.phasmojournal.ui.TopBar
-import app.tomsgenesis.phasmojournal.ui.theme.PhasmoJournalTheme
+import app.gene74.phasmojournal.ui.ChangesScreen
+import app.gene74.phasmojournal.ui.GhostInfoScreen
+import app.gene74.phasmojournal.ui.JournalScreenContent
+import app.gene74.phasmojournal.ui.TopBar
+import app.gene74.phasmojournal.ui.theme.PhasmoJournalTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +45,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable @Preview
+@Composable
 fun MainScreen(
     isDarkTheme: Boolean = true,
     onThemeChange: () -> Unit = {}

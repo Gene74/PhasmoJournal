@@ -1,4 +1,4 @@
-package app.tomsgenesis.phasmojournal.ui
+package app.gene74.phasmojournal.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -34,11 +34,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
-import app.tomsgenesis.phasmojournal.Evidence
-import app.tomsgenesis.phasmojournal.EvidenceState
-import app.tomsgenesis.phasmojournal.Ghost
-import app.tomsgenesis.phasmojournal.getEvidenceIcon
-import app.tomsgenesis.phasmojournal.ghosts
+import app.gene74.phasmojournal.Evidence
+import app.gene74.phasmojournal.EvidenceState
+import app.gene74.phasmojournal.Ghost
+import app.gene74.phasmojournal.getEvidenceIcon
+import app.gene74.phasmojournal.ghosts
 import kotlin.collections.iterator
 
 @Composable

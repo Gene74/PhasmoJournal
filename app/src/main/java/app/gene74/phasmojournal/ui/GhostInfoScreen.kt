@@ -1,4 +1,4 @@
-package app.tomsgenesis.phasmojournal.ui
+package app.gene74.phasmojournal.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -28,9 +28,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.tomsgenesis.phasmojournal.Ghost
-import app.tomsgenesis.phasmojournal.getEvidenceIcon
-import app.tomsgenesis.phasmojournal.ghosts
+import app.gene74.phasmojournal.Ghost
+import app.gene74.phasmojournal.getEvidenceIcon
+import app.gene74.phasmojournal.ghosts
 
 @Composable
 fun GhostInfoScreen(
@@ -146,7 +146,7 @@ fun GhostInfoScreen(
                 )
             }
 
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(32.dp))
 
             // Weaknesses
             Column {

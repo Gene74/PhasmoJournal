@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "app.tomsgenesis.phasmojournal"
+    namespace = "app.gene74.phasmojournal"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "app.tomsgenesis.phasmojournal"
+        applicationId = "app.gene74.phasmojournal"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
