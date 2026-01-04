@@ -11,9 +11,9 @@ import androidx.compose.material.icons.filled.Speed
 import androidx.compose.ui.graphics.vector.ImageVector
 
 enum class Evidence(val displayName: String) {
-    EMF5("EMF5"),
+    EMF5("EMF 5"),
     SPIRIT_BOX("Spirit Box"),
-    FINGERPRINTS("Fingerprints"),
+    UV_LIGHT("UV Light"),
     GHOST_ORB("Ghost Orb"),
     GHOST_WRITING("Ghost Writing"),
     FREEZING("Freezing"),
@@ -36,7 +36,7 @@ data class Ghost(
 val ghosts = listOf(
     Ghost(
         name = "Banshee",
-        evidences = setOf(Evidence.FINGERPRINTS, Evidence.GHOST_ORB, Evidence.DOTS),
+        evidences = setOf(Evidence.UV_LIGHT, Evidence.GHOST_ORB, Evidence.DOTS),
         strengths = "A Banshee will weaken their target before striking.",
         weaknesses = "Banshees can sometimes be heard screaming with a parabolic microphone.",
         trivia = "The singing siren, known for attracting its victims through song. " +
@@ -44,7 +44,7 @@ val ghosts = listOf(
     ),
     Ghost(
         name = "Demon",
-        evidences = setOf(Evidence.FINGERPRINTS, Evidence.GHOST_WRITING, Evidence.FREEZING),
+        evidences = setOf(Evidence.UV_LIGHT, Evidence.GHOST_WRITING, Evidence.FREEZING),
         strengths = "Demons will initiate hunts more often than other ghosts.",
         weaknesses = "Demons fear the crucifix and will be less aggressive near one.",
         trivia = "Demons are the most aggressive ghosts we've ever encountered. " +
@@ -60,14 +60,14 @@ val ghosts = listOf(
     ),
     Ghost(
         name = "Goryo",
-        evidences = setOf(Evidence.EMF5, Evidence.FINGERPRINTS, Evidence.DOTS),
+        evidences = setOf(Evidence.EMF5, Evidence.UV_LIGHT, Evidence.DOTS),
         strengths = "A Goryo will usually only show itself on camera if there are now people nearby.",
         weaknesses = "They are rarely seen far from their place of death.",
         trivia = "When a Goryo passes through a DOTS projector, using a video camery is the only way to see it."
     ),
     Ghost(
         name = "Hantu",
-        evidences = setOf(Evidence.FINGERPRINTS, Evidence.GHOST_ORB, Evidence.FREEZING),
+        evidences = setOf(Evidence.UV_LIGHT, Evidence.GHOST_ORB, Evidence.FREEZING),
         strengths = "Lower temperatures allow the Hantu to move at faster speeds.",
         weaknesses = "Hantus move slower in warmer areas.",
         trivia = "A Hantu is a rare ghost that thrives in the coldest climates. " +
@@ -75,7 +75,7 @@ val ghosts = listOf(
     ),
     Ghost(
         name = "Jinn",
-        evidences = setOf(Evidence.EMF5, Evidence.FINGERPRINTS, Evidence.FREEZING),
+        evidences = setOf(Evidence.EMF5, Evidence.UV_LIGHT, Evidence.FREEZING),
         strengths = "A Jinn will travel at a faster speed if its victim is far away.",
         weaknesses = "Turning off the location's power source will prevent the Jinn from using its ability.",
         trivia = "A Jinn is a territorial ghost that will attack when threatened. " +
@@ -99,7 +99,7 @@ val ghosts = listOf(
     ),
     Ghost(
         name = "Myling",
-        evidences = setOf(Evidence.EMF5, Evidence.FINGERPRINTS, Evidence.GHOST_WRITING),
+        evidences = setOf(Evidence.EMF5, Evidence.UV_LIGHT, Evidence.GHOST_WRITING),
         strengths = "A Myling is known to be quieter when hunting.",
         weaknesses = "Mylings more frequently make paranormal sounds.",
         trivia = "A Myling is a very vocal and active ghost. " +
@@ -107,7 +107,7 @@ val ghosts = listOf(
     ),
     Ghost(
         name = "Obake",
-        evidences = setOf(Evidence.EMF5, Evidence.FINGERPRINTS, Evidence.GHOST_ORB),
+        evidences = setOf(Evidence.EMF5, Evidence.UV_LIGHT, Evidence.GHOST_ORB),
         strengths = "When interacting with the environment, an Obake will rarely leave a trace.",
         weaknesses = "Sometimes this ghost will shapeshift leaving behind unique evidence.",
         trivia = "Obake are terrifying shape-shifters, capable of taking on many forms. " +
@@ -132,7 +132,7 @@ val ghosts = listOf(
     ),
     Ghost(
         name = "Phantom",
-        evidences = setOf(Evidence.SPIRIT_BOX, Evidence.FINGERPRINTS, Evidence.DOTS),
+        evidences = setOf(Evidence.SPIRIT_BOX, Evidence.UV_LIGHT, Evidence.DOTS),
         strengths = "Looking at a Phantom will drop your sanity considerably faster.",
         weaknesses = "Taking a photo of the Phantom will make it temporarily disappear.",
         trivia = "A Phantom is a ghost that can possess the living, inducing fear into those around it. " +
@@ -140,7 +140,7 @@ val ghosts = listOf(
     ),
     Ghost(
         name = "Poltergeist",
-        evidences = setOf(Evidence.SPIRIT_BOX, Evidence.FINGERPRINTS, Evidence.GHOST_WRITING),
+        evidences = setOf(Evidence.SPIRIT_BOX, Evidence.UV_LIGHT, Evidence.GHOST_WRITING),
         strengths = "Poltergeists can throw multiple objects at once, and with great force.",
         weaknesses = "With nothing to throw, Poltergeists become powerless.",
         trivia = "One of the most famous ghosts, the Poltergeist. " +
@@ -189,7 +189,7 @@ val ghosts = listOf(
     ),
     Ghost(
         name = "The Mimic",
-        evidences = setOf(Evidence.SPIRIT_BOX, Evidence.FINGERPRINTS, Evidence.FREEZING),
+        evidences = setOf(Evidence.SPIRIT_BOX, Evidence.UV_LIGHT, Evidence.FREEZING),
         strengths = "We're unsure what this ghost is capable of. Be careful.",
         weaknesses = "Several reports have noted ghost orb sightings near Mimics.",
         trivia = "The Mimic is an elusive, mysterious, copycat ghost that mirrors traits and behaviours " +
@@ -237,7 +237,7 @@ val ghosts = listOf(
     ),
     Ghost(
         name = "Gallu",
-        evidences = setOf(Evidence.EMF5, Evidence.FINGERPRINTS, Evidence.SPIRIT_BOX),
+        evidences = setOf(Evidence.EMF5, Evidence.UV_LIGHT, Evidence.SPIRIT_BOX),
         strengths = "Using protective equipment pushes the ghost to become enraged, weakening equipment effects.",
         weaknesses = "Being enraged exhausts the Gallu, making protective equipment more effective.",
         trivia = "Another form of demon, the Gallu is a reminder that death comes for us all. Using protective " +
@@ -245,7 +245,7 @@ val ghosts = listOf(
     ),
     Ghost(
         name = "Obambo",
-        evidences = setOf(Evidence.GHOST_WRITING, Evidence.FINGERPRINTS, Evidence.DOTS),
+        evidences = setOf(Evidence.GHOST_WRITING, Evidence.UV_LIGHT, Evidence.DOTS),
         strengths = "While aggressive, the Obambo is quicker to start hunting.",
         weaknesses = "While calm, the Obambo is slower to start hunting and easier to track.",
         trivia = "The Obambo is the ghost of someone never properly laid to rest. Fickle and defensive, " +
@@ -257,7 +257,7 @@ fun getEvidenceIcon(evidence: Evidence): ImageVector {
     return when (evidence) {
         Evidence.EMF5 -> Icons.Default.Speed
         Evidence.SPIRIT_BOX -> Icons.Default.Radio
-        Evidence.FINGERPRINTS -> Icons.Default.Fingerprint
+        Evidence.UV_LIGHT -> Icons.Default.Fingerprint
         Evidence.GHOST_ORB -> Icons.Default.Circle
         Evidence.GHOST_WRITING -> Icons.Default.AutoStories
         Evidence.FREEZING -> Icons.Default.AcUnit
