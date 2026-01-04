@@ -73,115 +73,107 @@ fun GhostInfoScreen(
         )
 
         // Right Column: Details
-        Column(
+        LazyColumn(
             modifier = Modifier
                 .weight(0.7f)
                 .fillMaxSize()
                 .padding(16.dp),
             horizontalAlignment = Alignment.Start
         ) {
-            // Ghost name
-            Text(
-                text = selectedGhost.name,
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.Bold
-            )
-
-            Spacer(modifier = Modifier.height(20.dp))
-
-            Text(
-                text = "Evidences",
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold
-            )
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            // Evidences
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(16.dp)
-            ) {
-                selectedGhost.evidences.forEach { evidence ->
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Box(
-                            modifier = Modifier
-                                .size(50.dp)
-                                .background(MaterialTheme.colorScheme.secondaryContainer, RoundedCornerShape(8.dp))
-                                .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(8.dp)),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Icon(
-                                imageVector = getEvidenceIcon(evidence),
-                                contentDescription = evidence.displayName,
-                                tint = MaterialTheme.colorScheme.onSecondaryContainer,
-                                modifier = Modifier.size(32.dp)
-                            )
-                        }
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = evidence.displayName.replace(" ", "\n"),
-                            style = MaterialTheme.typography.bodySmall,
-                            textAlign = TextAlign.Center,
-                            lineHeight = MaterialTheme.typography.bodySmall.fontSize * 1.2
-                        )
-                    }
-                }
+            // 1. Ghost Name
+            item {
+                Text(
+                    text = selectedGhost.name,
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(8.dp)) // Small space after name
             }
 
-            Spacer(modifier = Modifier.height(24.dp))
-
-            // Strengths
-            Column {
-                Text(
-                    text = "Strengths",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.Red
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = selectedGhost.strengths,
-                    style = MaterialTheme.typography.bodyLarge
-                )
-            }
-
-            Spacer(modifier = Modifier.height(24.dp))
-
-            // Weaknesses
-            Column {
-                Text(
-                    text = "Weaknesses",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = Color(0xFF4CAF50)
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = selectedGhost.weaknesses,
-                    style = MaterialTheme.typography.bodyLarge
-                )
-            }
-
-            Spacer(modifier = Modifier.height(24.dp))
-
-            // Trivia
-            Column {
-                Text(
-                    text = "Trivia",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = Color(0xFF0000FF)
-                )
-                Spacer(modifier = Modifier.height(8.dp))
+            // 2. Trivia
+            item {
                 Text(
                     text = selectedGhost.trivia,
                     style = MaterialTheme.typography.bodyLarge
                 )
+                Spacer(modifier = Modifier.height(24.dp)) // Large space after trivia
             }
 
-            // Spacer to push content up
-            Spacer(modifier = Modifier.weight(1f))
+            // 3. Evidences
+            item {
+                Text(
+                    text = "Evidences",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
+                    selectedGhost.evidences.forEach { evidence ->
+                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            Box(
+                                modifier = Modifier
+                                    .size(50.dp)
+                                    .background(MaterialTheme.colorScheme.secondaryContainer, RoundedCornerShape(8.dp))
+                                    .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(8.dp)),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Icon(
+                                    imageVector = getEvidenceIcon(evidence),
+                                    contentDescription = evidence.displayName,
+                                    tint = MaterialTheme.colorScheme.onSecondaryContainer,
+                                    modifier = Modifier.size(32.dp)
+                                )
+                            }
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Text(
+                                text = evidence.displayName.replace(" ", "\n"),
+                                style = MaterialTheme.typography.bodySmall,
+                                textAlign = TextAlign.Center,
+                                lineHeight = MaterialTheme.typography.bodySmall.fontSize * 1.2
+                            )
+                        }
+                    }
+                }
+                Spacer(modifier = Modifier.height(24.dp))
+            }
+
+            // 4. Strengths
+            item {
+                Column {
+                    Text(
+                        text = "Strengths",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.Red
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = selectedGhost.strengths,
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
+                Spacer(modifier = Modifier.height(24.dp))
+            }
+
+            // 5. Weaknesses
+            item {
+                Column {
+                    Text(
+                        text = "Weaknesses",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF4CAF50)
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = selectedGhost.weaknesses,
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ import androidx.compose.material.icons.filled.Speed
 import androidx.compose.ui.graphics.vector.ImageVector
 
 enum class Evidence(val displayName: String) {
-    EMF5("EMF 5"),
+    EMF5("EMF5"),
     SPIRIT_BOX("Spirit Box"),
     FINGERPRINTS("Fingerprints"),
     GHOST_ORB("Ghost Orb"),
