@@ -7,9 +7,9 @@ A free, ad-free companion app for the game [Phasmophobia](https://store.steampow
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/Evidences.png" width="540" alt="Evidence Tracker Screen"/>
-  <img src="screenshots/GhostInfos.png" width="540" alt="Ghost Info Screen"/>
-  <img src="screenshots/LightMode.png" width="540" alt="Light Mode"/>
+  <img src="screenshots/Evidences.png" width="270" alt="Evidence Tracker Screen"/>
+  <img src="screenshots/GhostInfos.png" width="270" alt="Ghost Info Screen"/>
+  <img src="screenshots/LightMode.png" width="270" alt="Light Mode"/>
 </p>
 
 ## Features
