@@ -146,7 +146,7 @@ fun GhostInfoScreen(
                 )
             }
 
-            Spacer(modifier = Modifier.height(32.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             // Weaknesses
             Column {
@@ -159,6 +159,23 @@ fun GhostInfoScreen(
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = selectedGhost.weaknesses,
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            // Trivia
+            Column {
+                Text(
+                    text = "Trivia",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = Color(0xFF0000FF)
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    text = selectedGhost.trivia,
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
